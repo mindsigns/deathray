@@ -1,0 +1,39 @@
+{% extends "base.dtl" %}   
+{% block body %}
+  {% for entry in entries %}
+  <div class="well">
+      <div class="media">
+      	<a class="pull-left" href="/transmit/{{entry.id}}">
+        {% if entry.image %}
+            <img class="media-object" src="/static/images/{{ entry.image}}" />
+        {% endif %}
+  		</a>
+  		<div class="media-body">
+            <h4 class="media-heading">{{ entry.title}}</h4>
+          <p class="text-right"></p>
+          <p>
+            {{ entry.text | linebreaksbr }} <br />
+          </p>
+            <ul class="list-inline list-unstyled">
+                <li><span><i>:: </i>{{ entry.pubdate }} </span></li>
+        </ul>
+       </div>
+    </div>
+  </div>
+  {% endfor %}
+
+<nav>
+    <ul class="pager">
+        {% if channel <= 0 %}
+        <li class="disabled"><a href="#">Prev</a></li>
+        {% else %}
+        <li><a href="/channel/{{channel|add:"-1"}}">Prev</a></li>
+        {% endif %}
+        {% if channel >= pages %}
+        <li class="disabled"><a href="#">Next</a></li>
+        {% else %}
+        <li><a href="/channel/{{channel|add:"1"}}">Next</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endblock %}

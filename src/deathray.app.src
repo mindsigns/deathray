@@ -1,0 +1,18 @@
+%%-*- mode: erlang -*-
+{application, deathray,
+ [
+  {description, "deathray"},
+  {vsn, "1"},
+  {modules, []},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  inets,
+                  crypto,
+                  mochiweb,
+                  webmachine
+                 ]},
+  {mod, { deathray_app, []}},
+  {env, []}
+ ]}.
