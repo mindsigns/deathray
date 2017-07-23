@@ -2,7 +2,7 @@
 
 {% block body %}
   {% for entry in entries %}
-  <div class="well">
+  <div class="well clearfix">
       <div class="media">
       	<a class="pull-left" href="/transmit/{{entry.id}}">
         {% if entry.image %}
