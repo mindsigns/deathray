@@ -40,11 +40,11 @@
   {% for entry in entries %}
   <div class="well">
       <div class="media">
-      	<a class="pull-left" href="/transmit/{{entry.id}}">
         {% if entry.image %}
+      	<a class="pull-left" href="/transmit/{{entry.id}}">
             <img class="media-object" src="/static/images/{{ entry.image}}" />
-        {% endif %}
   		</a>
+        {% endif %}
   		<div class="media-body">
             <h4 class="media-heading">{{ entry.title}}</h4>
           <p class="text-right"></p>
@@ -53,7 +53,7 @@
           </p>
             <ul class="list-inline list-unstyled">
                 <li><span><i>:: </i>{{ entry.pubdate }} </span></li>
-        </ul>
+            </ul>
        </div>
     </div>
   </div>
