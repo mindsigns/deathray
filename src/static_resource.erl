@@ -35,7 +35,7 @@ resource_exists(RD, Ctx) ->
     Path = wrq:disp_path(RD),
     Rel = filename:join([ P || P <- string:tokens(Path, "/"),
                                P /= ".."]),
-    Abs = filename:join([code:priv_dir(deathray_wm),
+    Abs = filename:join([code:priv_dir(deathray),
                          Ctx#ctx.docroot,Rel]),
     {filelib:is_file(Abs), RD,Ctx#ctx{fullpath=Abs}}.
 
