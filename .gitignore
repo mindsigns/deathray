@@ -1,0 +1,5 @@
+/deps
+/rel
+/Deathray.db
+/ebin
+erl_crash.dump
