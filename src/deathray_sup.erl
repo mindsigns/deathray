@@ -4,7 +4,7 @@
 %% @doc Supervisor for the deathray application.
 
 -module(deathray_sup).
--author('author <author@example.com>').
+-author('jon <jon@deathray.tv>').
 
 -behaviour(supervisor).
 
